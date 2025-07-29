@@ -36,9 +36,9 @@ module-margin = 1
 separator = " "
 separator-foreground = ${colors.alt-foreground}
 
-font-0 = "JetBrains Mono Nerd Font:size=9;3" ; Adjust font to your preferred nerd font
-font-1 = "Font Awesome 6 Free:pixelsize=10;3" ; For icons, install Font Awesome 6
-font-2 = "Font Awesome 6 Brands:pixelsize=10;3" ; For icons
+font-0 = "JetBrainsMono NL Regular:size=9;3"
+font-1 = "Font Awesome 6 Free:pixelsize=10;3"
+font-2 = "Font Awesome 6 Brands:pixelsize=10;3"
 
 modules-left = i3
 modules-center =
