@@ -42,7 +42,7 @@ font-2 = "Font Awesome 6 Brands:pixelsize=10;3"
 
 modules-left = i3
 modules-center =
-modules-right = date
+modules-right = bluetooth date
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -100,6 +100,42 @@ time-alt = %Y-%m-%d %H:%M:%S
 format-prefix = " "
 format-prefix-foreground = ${colors.accent}
 label = %time%
+
+[module/bluetooth]
+type = internal/bluetooth
+; Seconds to sleep between checks
+interval = 3
+
+; State update interval
+state-change-interval = 10
+
+; Available tags:
+;   <label-connected> (default)
+;   <label-disconnected> (default)
+;   <label-off> (default)
+;   <ramp-signal>
+;   <ramp-battery>
+format-connected = <ramp-signal> <label-connected>
+format-disconnected = <label-disconnected>
+format-off = <label-off>
+
+; Connected display
+label-connected = %device_alias%
+label-connected-foreground = ${colors.accent}
+
+; Disconnected display
+label-disconnected = "󰂯 Disconnected" ; U+F6A9 bluetooth-slash icon
+
+; Off display
+label-off = "󰂲 Off" ; U+F6B2 bluetooth-off icon
+label-off-foreground = ${colors.alt-foreground}
+
+; Ramp for signal strength
+ramp-signal-0 = "󰂱" ; U+F6B1 bluetooth-signal icon (low)
+ramp-signal-1 = "󰂰" ; U+F6B0 bluetooth-signal icon (medium)
+ramp-signal-2 = "󰂱" ; U+F6B1 bluetooth-signal icon (high)
+ramp-signal-3 = "󰂰"
+ramp-signal-foreground = ${colors.foreground}
 
 ;====================================================
 ;       SETTINGS (optional, but good for common values)
