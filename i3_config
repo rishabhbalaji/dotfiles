@@ -192,3 +192,12 @@ exec_always --no-startup-id blueman-applet
 
 # Launch Blueman Manager
 bindsym $mod+b exec blueman-manager
+
+# Start Variety Wallpaper Manager
+exec --no-startup-id variety
+
+# DEFAULT BORDER
+for_window [class="^.*"] border pixel 0
+for_window [title="^.*"] border pixel 0.75
+#for_window [class=".*"] border pixel 0
+hide_edge_borders both
