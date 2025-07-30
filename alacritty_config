@@ -10,10 +10,10 @@ args = ["--login"]
 
 # Font configuration
 [font]
-normal = { family = "JetBrainsMono NL Regular", style = "Regular" }
-bold = { family = "JetBrainsMono NL Regular", style = "Bold" }
-italic = { family = "JetBrainsMono NL Regular", style = "Italic" }
-bold_italic = { family = "JetBrainsMono NL Regular", style = "Bold Italic" }
+normal = { family = "Monospace", style = "Regular" }
+bold = { family = "Monospace", style = "Bold" }
+italic = { family = "Monospace", style = "Italic" }
+bold_italic = { family = "Monospace", style = "Bold Italic" }
 size = 10.0 # Adjust size as needed
 
 # Colors (Tomorrow Night Bright)
@@ -42,7 +42,7 @@ white = "0xFFFFFF"
 
 # Cursor
 [cursor]
-style = { shape = "Block", blinking = "On" }
+style = { shape = "beam", blinking = "On" }
 
 # Window transparency
 [window]

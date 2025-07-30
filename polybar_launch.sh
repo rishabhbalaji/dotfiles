@@ -14,9 +14,9 @@ MONITORS=$(xrandr --query | grep " connected" | cut -d" " -f1)
 # Launch Polybar for each detected monitor
 for m in $MONITORS; do
   if [ "$m" = "HDMI-1" ]; then # Ensure "HDMI-1" is correct
-    MONITOR=$m polybar -c ~/.config/polybar/config.ini primary &
+    MONITOR=$m polybar -c ~/.config/polybar/config.ini primary -r &
   else
-    MONITOR=$m polybar -c ~/.config/polybar/config.ini secondary & # <--- This is the crucial line for eDP-1
+    MONITOR=$m polybar -c ~/.config/polybar/config.ini secondary -r & # <--- This is the crucial line for eDP-1
   fi
 done
 

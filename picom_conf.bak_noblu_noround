@@ -33,7 +33,7 @@ opacity-rule = [
 
 # Blur
 blur: {
-  method = "dual_kawase"; # Try "dual_kawase" for good quality, "gaussian" is simpler
+  method = "gaussian"; # Try "dual_kawase" for good quality, "gaussian" is simpler
   strength = 5; # Adjust blur strength (e.g., 3-10)
   deviation = 1.0; # For gaussian blur
 };
