@@ -55,7 +55,8 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+Shift+q kill
 
 #Rofi
-bindsym $mod+d exec rofi -show run
+
+bindsym $mod+d exec rofi -show drun -modi drun -normal-window -drun-reload
 bindsym $mod+Tab exec "rofi -show window"
 bindsym $mod+Shift+D exec "rofi-theme-selector"
 
