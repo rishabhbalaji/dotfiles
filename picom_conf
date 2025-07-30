@@ -42,6 +42,12 @@ blur-background-frame = false;
 blur-background-fixed = false;
 blur-kern = "3x3box"; # Kernel for blur method
 
+blur-background-exclude = [
+  "class_g = 'Polybar'", # Exclude Polybar from blur
+  "_GTK_FRAME_EXTENTS@:c", # Often helps prevent blur on GTK popups
+  "class_g = 'slop'",     # scrot's selection tool
+];
+
 # Fading
 fading = true;
 fade-delta = 4;
