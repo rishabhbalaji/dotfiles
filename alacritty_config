@@ -1,0 +1,52 @@
+# ~/.config/alacritty/alacritty.toml
+
+# Basic Alacritty Configuration
+# https://github.com/alacritty/alacritty/blob/master/alacritty.toml
+
+# Shell
+[terminal.shell]
+program = "/bin/zsh" # Or "/bin/zsh" if you plan to use Zsh
+args = ["--login"]
+
+# Font configuration
+[font]
+normal = { family = "JetBrainsMono NL Regular", style = "Regular" }
+bold = { family = "JetBrainsMono NL Regular", style = "Bold" }
+italic = { family = "JetBrainsMono NL Regular", style = "Italic" }
+bold_italic = { family = "JetBrainsMono NL Regular", style = "Bold Italic" }
+size = 10.0 # Adjust size as needed
+
+# Colors (Tomorrow Night Bright)
+[colors]
+primary = { background = "0x1A1A1A", foreground = "0xEAEAEA" }
+
+[colors.normal]
+black = "0x000000"
+red = "0xD54E53"
+green = "0x89BDFF" # This is a custom brighter blue/green, traditionally 0x89B482 for Tomorrow Night
+yellow = "0xE7C547"
+blue = "0x7AA6DA"
+magenta = "0xC397D8"
+cyan = "0x70C0B1"
+white = "0xFFFFFF"
+
+[colors.bright]
+black = "0x666666"
+red = "0xFF5454"
+green = "0x98DDFF" # Custom brighter, traditionally 0xA8FF60
+yellow = "0xFFE38E"
+blue = "0x7AA6DA"
+magenta = "0xC397D8"
+cyan = "0x70C0B1"
+white = "0xFFFFFF"
+
+# Cursor
+[cursor]
+style = { shape = "Block", blinking = "On" }
+
+# Window transparency
+[window]
+opacity = 0.95 # Adjust for desired transparency (0.0 - 1.0)
+
+# Padding (inner spacing of the terminal)
+padding = { x = 5, y = 5 }
