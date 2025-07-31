@@ -235,3 +235,5 @@ exec_always --no-startup-id dunst
 
 # Lock screen with i3lock blur script
 bindsym $mod+l exec --no-startup-id ~/dotfiles/scripts/lock.sh
+# Automatically lock screen on suspend/idle with betterlockscreen
+exec_always --no-startup-id xss-lock -- ~/dotfiles/scripts/lock.sh --off 5 --ignore-lid

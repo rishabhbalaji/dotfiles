@@ -1,0 +1,112 @@
+# ~/.config/betterlockscreen/betterlockscreenrc
+# Betterlockscreen configuration for Kali Linux i3 Rice
+
+# ==============================================================================
+# 1. DEFAULT OPTIONS
+# ==============================================================================
+
+# Display wallpaper on a specific monitor, or all (0 for first, 1 for second, etc.)
+# display_on=0
+
+# Span image across all monitors (true/false).
+# If false, each monitor gets its own scaled image.
+span_image=true
+
+# Lock timeout (in seconds). Auto-lock after idle. (0 for no timeout)
+lock_timeout=300
+
+# List of effects to cycle through when using 'betterlockscreen -l'
+# fx_list=(dim blur dimblur pixel dimpixel color)
+# Using 'blur' for now, as it's the primary effect.
+fx_list=(blur)
+
+# Dim level for dim effect (0-100)
+dim_level=40
+
+# Blur level for blur effect (1-10)
+blur_level=8 # Increased blur level for stronger effect
+
+# Pixelation scale for pixel effect (x,y)
+# pixel_scale=10,1000
+
+# Solid color for 'color' effect (hex RGB, e.g., 000000)
+solid_color=282A2E
+
+# Command to get wallpaper. 'feh' is good for variety, ensure it's in PATH.
+wallpaper_cmd="feh --bg-fill"
+
+# Suppress verbose output (true/false)
+quiet=false
+
+# ==============================================================================
+# 2. DEFAULT THEME (i3lock-color specific styling)
+# ==============================================================================
+# Colors use 8-digit hex: RRGGBBAA (Red, Green, Blue, Alpha)
+
+# Theme for the input box and rings
+loginbox=282A2EC0        # Background color of login box/ring area (C0 = 75% opacity of #282A2E)
+loginshadow=00000000     # Shadow color, fully transparent
+
+# Lock text shown when screen is locked (e.g., "Type password to unlock...")
+locktext="Type password to unlock..."
+
+# Font for all text elements on lock screen
+font="JetBrainsMono Nerd Font Regular" # Ensure this matches your working font
+
+# Input ring colors
+ringcolor=8BE9FDFF       # Ring color (Accent, Opaque)
+insidecolor=282A2E80     # Inside of ring (Background, 50% opacity)
+separatorcolor=282A2E00  # Separator (Background, transparent)
+
+# Verification ring colors (when typing password)
+ringvercolor=EAEAEAFF    # Ring color when verifying (Foreground, Opaque)
+insidevercolor=282A2E80  # Inside of ring when verifying (Background, 50% opacity)
+
+# Wrong password ring colors
+ringwrongcolor=D54E53FF  # Ring color for wrong password (Red, Opaque)
+insidewrongcolor=282A2E80 # Inside of ring for wrong (Background, 50% opacity)
+
+# Time and Date colors
+timecolor=EAEAEAFF       # Time text color (Foreground, Opaque)
+time_format="%H:%M:%S"   # Time format
+datecolor=EAEAEAFF       # Date text color (Foreground, Opaque)
+date_format="%A, %B %e"  # Date format
+
+# Greeter (welcome) text color (if used by i3lock-color)
+greetercolor=EAEAEAFF
+
+# Keyboard layout indicator color (if visible)
+layoutcolor=EAEAEAFF
+
+# Key highlight color (when a key is pressed)
+keyhlcolor=D54E53FF      # Red accent
+
+# Backspace highlight color (when backspace is pressed)
+bshlcolor=8BE9FDFF       # Accent color
+
+# Verification/Wrong text and color
+veriftext="Verifying..."
+verifcolor=EAEAEAFF
+wrongtext="Access Denied!"
+wrongcolor=D54E53FF
+
+# Modifier key indicator color (e.g., Caps Lock)
+modifcolor=8BE9FDFF
+
+# Background color of the lock screen (only visible if no image)
+bgcolor=282A2EFF
+
+# ==============================================================================
+# 3. EXPERT OPTIONS (Crucial for i3lock-color integration)
+# ==============================================================================
+
+# Manually set command for i3lock-color. This MUST point to your compiled i3lock-color binary.
+i3lockcolor_bin="i3lock" # Default name is 'i3lock' if it overwrote the system binary
+
+# Suspend command when unlocking with correct password (e.g., "systemctl suspend")
+# suspend_command="systemctl suspend"
+
+# Custom arguments for i3lock-color (overwriting default "-n")
+# These are critical for specific behaviors like ignoring empty passwords.
+lockargs=(--ignore-empty-password)
+# lockargs+=(--force-clock) # Uncomment to force clock if it doesn't show by default
