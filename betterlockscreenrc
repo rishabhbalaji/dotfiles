@@ -10,7 +10,7 @@
 
 # Span image across all monitors (true/false).
 # If false, each monitor gets its own scaled image.
-span_image=true
+span_image=false
 
 # Lock timeout (in seconds). Auto-lock after idle. (0 for no timeout)
 lock_timeout=300

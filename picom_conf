@@ -2,7 +2,7 @@
 
 # Backend
 backend = "glx"; # Try "glx" first, if issues, try "xrender" or "cairo"
-
+shadow = false;
 # Rounded corners
 corner-radius = 10.0; # Adjust value for desired roundness
 round-borders = 1; # Enable rounded borders

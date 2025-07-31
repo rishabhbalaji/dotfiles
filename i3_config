@@ -237,3 +237,8 @@ exec_always --no-startup-id dunst
 bindsym $mod+l exec --no-startup-id ~/dotfiles/scripts/lock.sh
 # Automatically lock screen on suspend/idle with betterlockscreen
 exec_always --no-startup-id xss-lock -- ~/dotfiles/scripts/lock.sh --off 5 --ignore-lid
+
+
+# Set wallpaper using betterlockscreen
+# Manually update betterlockscreen wallpaper cache from Reddit
+bindsym $mod+Shift+w exec --no-startup-id /home/rbk/Main/Projects/DynamicRedditLockscreenWallpaper/venv/bin/python /home/rbk/Main/Projects/DynamicRedditLockscreenWallpaper/wallpaper_updater.py
