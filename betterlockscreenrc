@@ -101,7 +101,7 @@ bgcolor=282A2EFF
 # ==============================================================================
 
 # Manually set command for i3lock-color. This MUST point to your compiled i3lock-color binary.
-i3lockcolor_bin="i3lock" # Default name is 'i3lock' if it overwrote the system binary
+i3lockcolor_bin="/usr/bini3lock" # Default name is 'i3lock' if it overwrote the system binary
 
 # Suspend command when unlocking with correct password (e.g., "systemctl suspend")
 # suspend_command="systemctl suspend"
