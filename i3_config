@@ -55,7 +55,7 @@ bindsym $mod+Shift+q kill
 
 #Rofi
 
-bindsym $mod+d exec rofi -show drun -modi drun -normal-window -drun-reload
+bindsym $mod+d exec rofi -show drun -modi drun -drun-reload
 bindsym $mod+Tab exec "rofi -show window"
 bindsym $mod+Shift+D exec "rofi-theme-selector"
 
@@ -123,6 +123,20 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+#Assigning Apps to Workspaces, use xprop and choose the second value for the Class String
+assign [class="gnome-terminal-server"]→ $ws1
+assign [class="Gnome-terminal"]→ $ws1
+assign [class="URxvt"]→ $ws1
+assign [class="Firefox"]→ $ws2
+assign [class="Vivaldi-stable"]→ $ws2
+assign [class="Thunar"]→ $ws3
+assign [class="Nautilus"]→ $ws3
+assign [class="ferdi"] → $ws4
+assign [class="Ferdi"] → $ws4
+assign [class="vlc"]→ $ws7
+assign [class="Atom"]→ $ws8
+assign [class="google-chrome"] → $ws10
+
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
@@ -178,8 +192,8 @@ bindsym $mod+r mode "resize"
 #for_window [class="konsole"] border pixel 5
 
   ##Gap Variable
-  set $inner 0
-  set $outer 0
+  set $inner 3
+  set $outer 2
 
   ## Toggle Gaps
   gaps inner $inner
@@ -241,3 +255,10 @@ bindsym $mod+l exec --no-startup-id ~/dotfiles/scripts/lock.sh
 # Set wallpaper using betterlockscreen
 # Manually update betterlockscreen wallpaper cache from Reddit
 bindsym $mod+Shift+w exec --no-startup-id /home/rbk/Main/Projects/DynamicRedditLockscreenWallpaper/venv/bin/python /home/rbk/Main/Projects/DynamicRedditLockscreenWallpaper/wallpaper_updater.py
+
+#Scratchpad
+  # Make the currently focused window a scratchpad
+  bindsym $mod+Shift+minus move scratchpad
+
+  # Show the first scratchpad window
+  bindsym $mod+minus scratchpad show
